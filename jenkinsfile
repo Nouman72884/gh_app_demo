@@ -13,6 +13,11 @@ pipeline {
                           archiveArtifacts '**/*.py'
                         }
               }
+              stage('archiving artifacts') {
+                   steps {
+                           archiveArtifacts '**/*.txt'
+                         }
+               }
 
               stage('transfer artifacts') {
                     steps {
